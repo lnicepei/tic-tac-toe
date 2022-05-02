@@ -63,5 +63,11 @@ function GameEndCombinations (boardArray){
         boardArray[2] == "o" && boardArray[4] == "o" && boardArray[6] == "o"
     ){
         alert("OOO");
+    }else{
+        const isFull = boardArray.every(cell => cell.length > 0);
+        if (isFull) {
+            // endGame();
+            alert("It's a draw");
+         }
     }
 }   
