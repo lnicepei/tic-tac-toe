@@ -64,4 +64,4 @@ function GameEndCombinations (boardArray){
     ){
         alert("OOO");
     }
-}
+}   
