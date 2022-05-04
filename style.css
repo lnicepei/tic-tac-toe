@@ -14,8 +14,8 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 25%;
-    height: 25%;
+    width: 500px;
+    height: 500px;
     border: 1px solid black;
 }
 
@@ -23,5 +23,4 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
 }
