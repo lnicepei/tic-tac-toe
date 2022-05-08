@@ -1,5 +1,5 @@
 const Player = (name, sign) => {
-    const getName = () => name;
+    const getName = () => prompt(name);
     const getSign = () => sign;
     return {getName, getSign}
 };
@@ -42,6 +42,8 @@ const Gameboard = (() => {
         document.querySelector(".board-container").innerHTML = "";
         document.querySelector(".restart-menu").innerHTML = "";
         document.querySelector(".game-result").textContent = "";
+
+        // document.svg.style.transform = "scale(1)";
 
         buildBoard();
     };
@@ -90,7 +92,6 @@ function GameEndCombinations (boardArray) {
 
     } else {
         const isFull = boardArray.every(cell => cell.length > 0);
-
         if (isFull) {
             document.querySelector(".game-result").textContent = "It's a draw";
             let restartButton = document.createElement("div");
