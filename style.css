@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,35 +7,54 @@
 
 body{
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    user-select: none;
+}
+
+.game{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .board-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+    width: 450px;
+    height: 450px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* border: 40px solid white; */
+    border-radius: 100px;
+    padding: 20px;
 }
 
 .board-container > div{
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 1px solid black;
+    margin: .4rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
+    transition: .2s linear;
+    border-radius: 20px;
+}
+
+.board-container > div:hover{
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 1px 1px; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 2px;
 }
 
 .game-result{
-    width: 100px;
     height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Koulen, sans-serif;
+    font-size: 2rem;
 }
 
 .restart-menu{
@@ -42,11 +63,20 @@ body{
 }
 
 .restart-button{
-    height: 100px;
+    /* height: 100px; */
     width: 100px;
     background: #000;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Koulen, sans-serif;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .4s ease-out;
+}
+
+.restart-button:hover{
+    background-position: left bottom;
+    color: white;
 }
