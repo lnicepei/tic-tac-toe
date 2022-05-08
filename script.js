@@ -43,8 +43,6 @@ const Gameboard = (() => {
         document.querySelector(".restart-menu").innerHTML = "";
         document.querySelector(".game-result").textContent = "";
 
-        // document.svg.style.transform = "scale(1)";
-
         buildBoard();
     };
 
